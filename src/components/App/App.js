@@ -32,10 +32,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header owner={OWNER} repo={REPO} />
       {!!response && (
         <Switch>
-          <Route path="detail">
+          <Route path="/details/:detailId">
             <Detail />
           </Route>
           <Route path="/">

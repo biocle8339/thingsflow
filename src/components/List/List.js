@@ -14,6 +14,7 @@ const List = function ({ list }) {
         ) : (
           <Entry
             key={data.id}
+            id={data.id}
             number={data.number}
             title={data.title}
             author={data.user.login}
@@ -40,10 +41,16 @@ const Container = styled.div`
     width: 500px;
     height: 100px;
     border-bottom: 1px solid black;
+    text-decoration: none;
+    color: black;
     cursor: pointer;
 
     .titleContainer {
-      width: 350px;
+      width: 83%;
+    }
+
+    .countContainer {
+      width: 17%;
     }
   }
 
