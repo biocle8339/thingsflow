@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = function () {
-  return <Container>Organization Name / Repository Name</Container>;
+const Header = function ({ owner, repo }) {
+  return (
+    <Container>
+      <h1>{`${owner} / ${repo}`}</h1>
+    </Container>
+  );
 };
 
 const Container = styled.div`
-  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 `;
 
 export default Header;

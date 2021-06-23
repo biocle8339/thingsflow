@@ -1,7 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Detail = function () {
+  const { detailId } = useParams();
+  console.log(detailId);
   return <Container>detail</Container>;
 };
 
