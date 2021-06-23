@@ -36,7 +36,7 @@ function App() {
       {!!response && (
         <Switch>
           <Route path="/details/:detailId">
-            <Detail />
+            <Detail list={response} />
           </Route>
           <Route path="/">
             <List list={response} />
