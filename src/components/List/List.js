@@ -3,14 +3,16 @@ import styled from "styled-components";
 
 import Entry from "./Entry";
 
+const bannerURL = "https://thingsflow.com/ko/home";
+
 const List = function ({ list }) {
   return (
     <Container>
       {list.map((data, index) =>
         index === 4 ? (
-          <div key={data.id} className="entry">
-            <img src="https://placehold.it/500x100?text=ad" />
-          </div>
+          <a key={data.id} className="entry" href={bannerURL}>
+            <img src="https://placehold.it/500x100?text=ad" alt="banner" />
+          </a>
         ) : (
           <Entry
             key={data.id}
